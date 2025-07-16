@@ -36,6 +36,7 @@ import {
   Github,
   RefreshCw,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const fileManager = useFileManager();
@@ -88,11 +89,20 @@ export default function Home() {
                 <Monitor className="h-3 w-3" />
                 <span>v1.0.0</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Button variant="ghost" size="sm" className="h-7 w-7 p-0">
+              <Link
+                href="https://github.com/EgonThorne/texlens-latex-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-7 w-7 p-0 hover:bg-muted hover:text-muted-foreground hover:border-muted-foreground"
+                >
                   <Github className="h-3 w-3" />
                 </Button>
-              </div>
+              </Link>
             </div>
           </SidebarFooter>
         </Sidebar>
